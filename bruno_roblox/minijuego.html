@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Roblox info web - Historia</title>
+    <link rel="icon" type="image/png" href="OIP.webp">
+    <link rel="stylesheet" href="style.css">
+<head>
+           <nav>
+           <ul>
+            <li><a href="index.html">Volver</a></li>
+</head>
+<style>
+body{
+    margin:0;
+    overflow:hidden;
+    cursor:default;
+}
+
+#enemigo{
+    position:fixed;
+    width:100px;
+    height:100px;
+    pointer-events:none;
+    left:0;
+    top:0;
+}
+
+#mensaje{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:50px;
+    color:white;
+    font-family:Arial;
+    background:rgb(255, 0, 0);
+    padding:20px;
+    border-radius:15px;
+    display:none;
+}
+</style>
+
+</head>
+<body>
+
+<img src="cabeza.webp" id="enemigo">
+
+<div id="mensaje">¡Te atrapé!</div>
+
+<script>
+const enemigo = document.getElementById("enemigo");
+const mensaje = document.getElementById("mensaje");
+
+let mouseX = window.innerWidth/2;
+let mouseY = window.innerHeight/2;
+
+let x = 100;
+let y = 100;
+
+let atrapado = false;
+
+document.addEventListener("mousemove",e=>{
+    mouseX=e.clientX;
+    mouseY=e.clientY;
+});
+
+function mover(){
+
+    if(!atrapado){
+
+        x += ((mouseX - enemigo.offsetWidth / 2) - x) * 0.05;
+        y += ((mouseY - enemigo.offsetHeight / 2) - y) * 0.05;
+
+        enemigo.style.left = x+"px";
+        enemigo.style.top = y+"px";
+
+        const dx = mouseX - (x + enemigo.offsetWidth / 2);
+        const dy = mouseY - (y + enemigo.offsetHeight / 2);
+        const distancia = Math.sqrt(dx*dx+dy*dy);
+
+        if(distancia<35){
+
+            atrapado=true;
+            mensaje.style.display="block";
+
+            setTimeout(()=>{
+                location.reload();
+            },1000);
+        }
+
+        requestAnimationFrame(mover);
+    }
+}
+
+mover();
+</script>
+  <script>
+  document.addEventListener('mousemove', (e) => {
+    // Crea un div para la partícula
+    const particula = document.createElement('div');
+    particula.classList.add('particula');
+    
+    // Lo posiciona en el mouse
+    particula.style.left = e.clientX + 'px';
+    particula.style.top = e.clientY + 'px';
+    
+    document.body.appendChild(particula);
+    
+    // Lo borra del HTML después de que termina la animación para no saturar la página
+    setTimeout(() => {
+      particula.remove();
+    }, 800);
+  });
+</script>
+
+</body>
+</html>

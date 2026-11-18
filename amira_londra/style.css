@@ -1,0 +1,351 @@
+h1{color: rgb(158, 16, 5);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font:align 70px;
+    text-align: center;
+}
+h2{
+color: rgb(165, 19, 14);
+font-family: Arial, Helvetica, sans-serif;
+font-size: 30px;
+text-align: center;
+
+}
+body{
+    background-color: rgb(100, 3, 3);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+p{
+    color: rgb(110, 16, 4);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+h3{
+    color: rgb(36, 5, 109);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+ul{
+    color: rgb(173, 31, 6);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+margin: 35px;}
+h4{
+    color: rgb(24, 4, 112);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+}
+
+/* --- CONFIGURACIÓN GENERAL --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* Fondo de la página web (Negro sutil) */
+}
+
+/* --- BARRA DE NAVEGACIÓN (HEADER) --- */
+.main-header {
+   /* Negro más oscuro para el fondo del menú */
+    padding: 15px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra elegante abajo del menú */
+    width: 100%;
+}
+
+/* --- LISTA DEL MENÚ (CENTRADO PERFECTO) --- */
+.menu-list {
+    list-style: none;         /* Quita los puntos negros de la lista */
+    padding: 0;
+    margin: 0;
+    display: flex;            /* Activa el modo flexible */
+    justify-content: center;  /* Centra horizontalmente en el medio de la pantalla */
+    align-items: center;      /* Centra verticalmente */
+    gap: 25px;                /* Espacio de separación entre cada botón */
+}
+
+/* --- ESTILO DE LOS BOTONES ROJIZOS --- */
+.menu-link {
+    display: inline-block;
+    text-decoration: none;     /* Quita el subrayado del texto */
+    color: #ffffff;            /* Texto de color blanco */
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.5px;     /* Ligera separación entre letras */
+    padding: 12px 26px;        /* Tamaño interno del botón (alto y ancho) */
+    background-color: transparent; /* Fondo transparente inicialmente */
+    border: 2px solid #ff4d4d; /* Borde de color rojo claro / coral vibrante */
+    border-radius: 30px;       /* Bordes redondeados estilo cápsula */
+    transition: all 0.3s ease; /* Suaviza las animaciones al pasar el mouse */
+}
+
+/* --- EFECTO AL PASAR EL MOUSE (HOVER) --- */
+.menu-link:hover {
+    background-color: #ff4d4d; /* El fondo se llena con el rojo claro */
+    color: #0a0a0a;            /* El texto se vuelve negro para contrastar perfectamente */
+    transform: translateY(-3px); /* El botón "flota" un poco hacia arriba */
+    box-shadow: 0 6px 20px rgba(255, 77, 77, 0.4); /* Resplandor/brillo rojo claro */
+    cursor: pointer;
+}
+
+/* --- EFECTO AL HACER CLIC --- */
+.menu-link:active {
+    transform: translateY(-1px); /* Baja ligeramente simulando una pulsación */
+    box-shadow: 0 3px 10px rgba(255, 77, 77, 0.2);
+}
+img{
+    width: 800px;
+    height: auto;
+ 
+}
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* --- CONFIGURACIÓN GENERAL --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Fondo Vinotinto uniforme y elegante */
+    background-color: #4A0E17; 
+    background-attachment: fixed;
+}
+
+/* --- CONTENEDOR / CAJA DE TEXTO --- */
+.contenedor-texto {
+    max-width: 800px;         /* Limita el ancho para que sea cómodo de leer */
+    margin: 40px auto;        /* Centra la caja en la pantalla y da espacio arriba/abajo */
+    padding: 30px;            /* Espacio interno entre el texto y el borde de la caja */
+    background-color: #2D050B; /* Vinotinto mucho más oscuro para hacer contraste */
+    border-left: 5px solid #ff4d4d; /* Línea decorativa roja al lado izquierdo (combina con tus botones) */
+    border-radius: 8px;       /* Bordes ligeramente redondeados */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
+}
+
+/* --- ENCABEZADOS Y TEXTOS --- */
+h1 {
+    color: #ffffff; /* Blanco para que resalte sobre el fondo oscuro */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px; /* Corregido: 'font:align' no existe, se usa font-size */
+    text-align: center;
+}
+
+h2 {
+    color: #ff4d4d; /* Rojo claro para combinar con el menú */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+h3 {
+    color: #ff8585; /* Un tono más suave para que sea legible */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+    font-size: 20px;
+}
+
+h4 {
+    color: #ff8585;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+    font-size: 25px;
+}
+
+p {
+    color: #e0e0e0; /* Gris claro/blanco roto para que la lectura sea super cómoda */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    line-height: 1.6; /* Espaciado entre líneas para mejor lectura */
+}
+
+ul {
+    color: #e0e0e0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+    font-size: 25px;
+    margin: 35px;
+}
+
+/* --- BARRA DE NAVEGACIÓN (HEADER) --- */
+.main-header {
+    background-color: #1a0205; /* Vinotinto casi negro para el menú */
+    padding: 15px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+/* --- LISTA DEL MENÚ --- */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+/* --- ESTILO DE LOS BOTONES --- */
+.menu-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding: 12px 26px;
+    background-color: transparent;
+    border: 2px solid #ff4d4d;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.menu-link:hover {
+    background-color: #ff4d4d;
+    color: #0a0a0a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 77, 77, 0.4);
+    cursor: pointer;
+}
+
+.menu-link:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(255, 77, 77, 0.2);
+}
+
+/* --- IMÁGENES --- */
+img {
+    width: 100%;
+    max-width: 800px; /* Se adapta a pantallas más chicas sin romperse */
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+
+}
+
+
+header class ="main-header">
+    <ul class="menu-list">
+        <li><a class="menu-link" href="#">Inicio</a></li>
+        <li><a class="menu-link" href="#">Acerca de</a></li>
+        <li><a class="menu-link" href="#">Contacto</a></li>
+    </ul>
+</header>
+
+<!-- AQUÍ EMPIEZA TU CAJA DE TEXTO -->
+<div class="contenedor-texto">
+    <h1>Mi Título Principal</h1>
+    <h2>Subtítulo de la sección</h2>
+    <p>
+        Este es un párrafo de ejemplo dentro de tu nueva caja de texto. El fondo de la caja es un vinotinto muy oscuro y el texto es claro, lo que hace que sea extremadamente fácil de leer y luzca muy profesional.
+    </p>
+    <h3>Un subtítulo menor</h3>
+    <p>Cualquier cosa que pongas aquí dentro adoptará el diseño estilizado automáticamente.</p>
+</div>
+
+
+
+/* --- CONFIGURACIÓN GENERAL --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #4A0E17; /* Fondo Vinotinto */
+    background-attachment: fixed;
+}
+
+/* --- CONTENEDOR DE LA CAJA (Para centrar el adorno y la caja juntos) --- */
+.seccion-caja {
+    max-width: 800px;
+    margin: 60px auto; /* Espacio entre cajas */
+    padding: 0 20px;
+}
+
+/* --- ADORNO DE LA GUITARRA --- */
+.adorno-guitarra {
+    text-align: center;
+    font-size: 45px;          /* Tamaño de la guitarra */
+    color: #4A0E17;           /* Color igual al fondo vinotinto */
+    background-color: #F5F5DC; /* Fondo beige circular */
+    width: 80px;
+    height: 80px;
+    line-height: 80px;        /* Centra la guitarra verticalmente */
+    border-radius: 50%;       /* Hace el fondo circular */
+    margin: 0 auto -40px auto; /* Truco CSS: Hace que flote justo a la mitad del borde superior */
+    position: relative;       /* Lo posiciona encima de la caja */
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* --- CAJA DE TEXTO BEIGE --- */
+.caja-beige {
+    background-color: #F5F5DC; /* Color Beige principal */
+    padding: 50px 40px 40px 40px; /* Más espacio arriba para que no choque con la guitarra */
+    border-radius: 15px;       /* Bordes redondeados elegantes */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+    border: 2px solid #E6D7B8; /* Un borde sutil para definir la caja */
+}
+
+/* --- TEXTOS DENTRO DE LA CAJA BEIGE --- */
+/* (Nota: Ahora los textos deben ser oscuros para que se lean sobre el beige) */
+
+.caja-beige h1 {
+    color: #4A0E17; /* Título en vinotinto */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.caja-beige h2 {
+    color: #A5130E; /* Rojo oscuro */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    text-align: center;
+}
+
+.caja-beige p {
+    color: #2B2B2B; /* Gris muy oscuro casi negro para una lectura perfecta */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.caja-beige h3, .caja-beige h4 {
+    color: #4A0E17;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+}
+
+.caja-beige ul {
+    color: #2B2B2B;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+    font-size: 18px;
+}
+
+#volverIndex {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #e8a1bd;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+#volverIndex:hover {
+    background-color: #c86b91;
+    transform: scale(1.1);
+}
+

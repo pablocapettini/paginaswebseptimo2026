@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox info web - Historia</title>
+    <link rel="stylesheet" href="galeriasty.css">
+    <link rel="icon" type="image/png" href="OIP.webp">
+</head>
+       <nav>
+           <ul>
+               <li><a href="index.html">Volver</a></li>
+           </ul>
+        </nav>
+<body>
+  <h1 class="text-gradient">Historia</h1>
+    <hr>
+    <h2>Historia:</h2>
+    <p>En 1994, Roblox iba a ser originalmente una aplicación de físicas. Más tarde, en 2006, completó su fase alpha, y en 2007 terminó su fase beta; en ese mismo año, los brazos y las piernas de los jugadores finalmente se pudieron mover.
+
+En 2008, todos los bloques recibieron un delineado suave. Para 2010, la plataforma empezó a ganar mucha más popularidad en YouTube, y en 2011 mejoraron los gráficos de sombreado. En 2012 ocurrió el mayor hackeo en la historia de Roblox.
+
+En 2013 se lanzó la aplicación para iPads, iPhones e iPods, y en 2014 llegó a Android; ese año también cambiaron un montón de texturas por unas de mejor calidad y actualizaron las animaciones del jugador. En 2015 se cambió la cara por defecto de forma temporal.
+
+Para 2016 agregaron R15, un nuevo tipo de cuerpo opcional con 15 articulaciones. En 2017, Roblox removió el viejo terreno estilo Minecraft para implementar uno más suave, lo que rompió varios juegos; además, lanzaron una configuración de seguridad para reducir los hackeos, pero esto terminó rompiendo millones de juegos antiguos. En 2018 el juego recibió una demanda relacionada con la seguridad infantil.
+
+En 2019, Roblox agregó otro tipo de cuerpo que fue muy odiado por la comunidad. En 2020 cambiaron la interfaz de usuario, lo que hizo que muchos juegos se vieran mal, y en 2021 actualizaron los gráficos a un estilo más realista, provocando que algunos mapas se volvieran extremadamente brillosos.
+
+En 2022 la compañía perdió millones de dólares, y en 2023 el juego comenzó a entrar en decadencia. En 2024 se rumoreó que Roblox iba a cerrar, lo cual resultó ser completamente falso. Finalmente, en 2025, el juego volvió a ganar popularidad gracias a varios juegos de baja calidad, y actualmente ya se implementaron las caras hiperrealistas odiados.</p>
+
+<script>
+  document.addEventListener('mousemove', (e) => {
+    // Crea un div para la partícula
+    const particula = document.createElement('div');
+    particula.classList.add('particula');
+    
+    // Lo posiciona en el mouse
+    particula.style.left = e.clientX + 'px';
+    particula.style.top = e.clientY + 'px';
+    
+    document.body.appendChild(particula);
+    
+    // Lo borra del HTML después de que termina la animación para no saturar la página
+    setTimeout(() => {
+      particula.remove();
+    }, 800);
+  });
+</script>
+<h2>Extra:</h2>
+<!-- Botón -->
+<button id="botonMusica">▶ Reproducir música</button>
+
+<!-- Audio -->
+<audio id="miMusica">
+    <source src="Raining Tacos - Parry Gripp & BooneBum.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+</audio>
+
+<script>
+const musica = document.getElementById("miMusica");
+const boton = document.getElementById("botonMusica");
+
+boton.addEventListener("click", () => {
+    if (musica.paused) {
+        musica.play();
+        boton.textContent = "⏸ Pausar música";
+    } else {
+        musica.pause();
+        boton.textContent = "▶ Reproducir música";
+    }
+});
+</script>
+</body>
+</html>

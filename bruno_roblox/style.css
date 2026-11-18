@@ -1,0 +1,302 @@
+h1 {
+    color: rgb(0, 74, 77);
+    font-size: 70px;
+    text-align: center;
+    
+}
+body {
+    background-image: url(madera.jpg);
+    background-repeat: repeat;
+    background-size: 50%;
+}
+li {
+    color: aqua;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: large;
+}
+hr {
+    color:black;
+}
+.text-gradient {
+  font-size: 60px;
+  font-weight: 800;
+  /* Pintamos el texto con un gradiente */
+  background: linear-gradient(90deg, #00f2fe, #4facfe, #00f2fe);
+  background-size: 200% auto;
+  animation: shine 3s linear infinite;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+body {
+    background-color: #0b0f19; /* Fondo oscuro */
+    background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+img {
+    display: block;
+    width: 250px;
+    border: #00f2fe;
+    align-items: center;
+}
+h3 {
+    color:red;
+}
+.imagen-pequena {
+    width: 30px;  /* Cambia este número para ajustar el ancho */
+    height: auto; /* Mantiene la proporción de la imagen para que no se deforme */
+    cursor: pointer; /* Hace que el cursor cambie a una "manito" al pasar por encima */
+}
+/* Ideal para fondos oscuros */
+body {
+    background-color: #0f0f1a; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #00ffff; /* Color cian neón */
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px #00ffff;
+    transition: all 0.3s ease;
+}
+
+/* Efecto Hover */
+nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #00ffff, 
+                 0 0 20px #00ffff, 
+                 0 0 40px #00ffff; /* Triple capa de brillo */
+    transform: scale(1.1); /* Se agranda un 10% */
+}
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    /* Truco: el degradado se aplica al fondo, pero solo se ve a través del texto */
+    background: linear-gradient(270deg, #ff4500, #ff0000, #ff006a, #ff0037);
+    background-size: 800% 800%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    
+    /* Animación infinita */
+    animation: moverDegradado 8s ease infinite;
+}
+
+/* Los "keyframes" definen el movimiento del fondo */
+@keyframes moverDegradado {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/* Necesita un fondo oscuro para que resalte */
+body {
+    background-color: #121214;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: rgb(0, 61, 141); /* El texto casi no se ve al principio */
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+/* El efecto mágico al hacer hover */
+p:hover {
+    color: #00ffcc; /* Cambia a un color vibrante */
+    text-shadow: 0 0 8px rgba(0, 255, 204, 0.6),
+                 0 0 20px rgba(0, 255, 204, 0.4);
+    transform: scale(1.01); /* Un levísimo zoom para dar dinamismo */
+}
+.contenedor {
+    display: flex;
+    gap: 10px; /* espacio entre imágenes */
+}
+
+.contenedor img {
+    width: 100px;
+    height: auto;
+}
+nav {
+    background-color: #333;
+    padding: 15px;
+}
+.boton-arriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 12px 18px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.boton-arriba:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+html {
+    scroll-behavior: smooth;
+}
+hr {
+    color: white;
+}
+i {
+    float: right;
+}
+.boton-arriba:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+html {
+    scroll-behavior: smooth;
+}
+.botonBorrar {
+    background: linear-gradient(135deg, #2563eb, #9333ea);
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all .3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+
+.botonBorrar:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(37,99,235,.4);
+}
+
+.botonBorrar:active {
+    transform: scale(.96);
+}
+button {
+    position: relative;
+    overflow: hidden;
+}
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: rgba(255,255,255,.3);
+    transform: skewX(-25deg);
+    transition: .6s;
+}
+
+button:hover::before {
+    left: 140%;
+}
+li {
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: #00258a;
+  padding-left: 15px; /* Crea un ligero salto visual */
+}
+img {
+  /* Controla la velocidad de la animación (0.3 segundos) */
+  transition: transform 0.3s ease; 
+}
+
+img:hover {
+  /* Agranda la imagen un 10%. (1.1 = 110% del tamaño original) */
+  transform: scale(1.1); 
+}
+i {
+  display: inline-block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+i:hover {
+  transform: translateY(-5px); /* Sube 5 píxeles */
+  /* Crea un efecto de brillo/sombra con el mismo color del icono */
+  filter: drop-shadow(0px 5px 5px rgba(52, 152, 219, 0.5)); 
+  color: #ffffff;
+}
+i {
+    color: #8125eb;
+}
+.particula {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: #3498db; /* Color de las chispas */
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: desvanecer 0.8s linear forwards;
+}
+
+@keyframes desvanecer {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    /* Se mueven un poco hacia arriba y se encogen */
+    transform: translate(-50%, -100%) scale(0);
+    opacity: 0;
+  }
+}
+a {
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  padding: 4px 0;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #9b59b6;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+hr {
+  border: 0; /* Quitamos el borde gris por defecto */
+  height: 2px;
+  /* Degradado que va desde transparente, pasa por tu color, y vuelve a transparente */
+  background: linear-gradient(to right, transparent, #3498db, transparent);
+  margin: 30px 0;
+}
+ul{
+    padding: 10px;
+}

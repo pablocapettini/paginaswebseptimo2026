@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrusel</title>
+
+<style>
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+    background:#f0f0f0;
+}
+
+.carrusel{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+#imagen{
+    width:600px;
+    height:400px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+button{
+    font-size:30px;
+    padding:10px 15px;
+    cursor:pointer;
+}
+</style>
+
+</head>
+<body>
+
+<div class="carrusel">
+    <button id="anterior">&#10094;</button>
+
+    <img id="imagen" src="img/foto1.jpg" alt="Imagen">
+
+    <button id="siguiente">&#10095;</button>
+</div>
+
+<script>
+const imagen = document.getElementById("imagen");
+
+const fotos = [
+    "img/foto1.jpg",
+    "img/foto2.jpg",
+    "img/foto3.jpg",
+    "img/foto4.jpg"
+];
+
+let indice = 0;
+
+document.getElementById("siguiente").onclick = () => {
+    indice++;
+    if (indice >= fotos.length) indice = 0;
+    imagen.src = fotos[indice];
+};
+
+document.getElementById("anterior").onclick = () => {
+    indice--;
+    if (indice < 0) indice = fotos.length - 1;
+    imagen.src = fotos[indice];
+};
+
+// Cambia automáticamente cada 3 segundos
+setInterval(() => {
+    indice++;
+    if (indice >= fotos.length) indice = 0;
+    imagen.src = fotos[indice];
+}, 3000);
+</script>
+
+</body>
+</html>

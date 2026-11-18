@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel de Fotos</title>
+    <!-- Enlace a los estilos de Swiper -->
+    <link rel="stylesheet" href="https://jsdelivr.net" />
+    <link rel="stylesheet" href="stylePRUEBA.css">
+</head>
+<body>
+
+    <!-- Contenedor principal del carrusel -->
+    <div class="swiper miCarrusel">
+        <div class="swiper-wrapper">
+            <!-- Agrega tus imágenes aquí -->
+            <div class="swiper-slide"><img src="feliz.png" alt="Foto 1"></div>
+            <div class="swiper-slide"><img src="feliz.png" alt="Foto 2"></div>
+            <div class="swiper-slide"><img src="feliz.png" alt="Foto 3"></div>
+        </div>
+        <!-- Botones de navegación (Flechas) -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Paginación (Puntos) -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Script de Swiper -->
+    <script src="https://jsdelivr.net"></script>
+    <script>
+      const swiper = new Swiper('.miCarrusel', {
+        loop: true, // Hace que el carrusel sea infinito
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>  <!-- esto es solo una prueba -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Plataformas</title>
+    <style>
+        body { margin: 0; background: #111; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; color: white; font-family: Arial, sans-serif; user-select: none; }
+        canvas { background: #232526; border: 4px solid #fff; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+        #hud { width: 800px; display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 20px; font-weight: bold; }
+    </style>
+       <nav>
+           <ul>
+               <li><a href="index.html">Volver</a></li>
+           </ul>
+        </nav>
+</head>
+<body>
+    <div id="hud">
+        <div id="vidas">Vidas: ❤️❤️❤️</div>
+        <div id="puntos">Puntos: 0</div>
+    </div>
+    <canvas id="canvas" width="800" height="400"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const jugador = { x: 50, y: 300, ancho: 30, alto: 30, velocidadX: 0, velocidadY: 0, velocidadMax: 5, fuerzaSalto: 12, enSuelo: false, direccion: 'derecha', vidas: 3, puntos: 0 };
+        const gravedad = 0.6;
+        const friccion = 0.85;
+        const plataformas = [
+            { x: 0, y: 370, ancho: 800, alto: 30 },
+            { x: 150, y: 280, ancho: 150, alto: 15 },
+            { x: 400, y: 210, ancho: 150, alto: 15 },
+            { x: 100, y: 140, ancho: 150, alto: 15 },
+            { x: 600, y: 130, ancho: 150, alto: 15 }
+        ];
+        let enemigos = [
+            { id: 1, x: 200, y: 250, ancho: 25, alto: 30, velocidadX: 2, inicioX: 150, finX: 275 },
+            { id: 2, x: 450, y: 180, ancho: 25, alto: 30, velocidadX: -1.5, inicioX: 400, finX: 525 },
+            { id: 3, x: 650, y: 100, ancho: 25, alto: 30, velocidadX: 2, inicioX: 600, finX: 725 }
+        ];
+        const datosEnemigos = {
+            1: { id: 1, x: 200, y: 250, ancho: 25, alto: 30, velocidadX: 2, inicioX: 150, finX: 275 },
+            2: { id: 2, x: 450, y: 180, ancho: 25, alto: 30, velocidadX: -1.5, inicioX: 400, finX: 525 },
+            3: { id: 3, x: 650, y: 100, ancho: 25, alto: 30, velocidadX: 2, inicioX: 600, finX: 725 }
+        };
+        const balas = [];
+        const teclas = {};
+        let puedeDisparar = true;
+
+        window.addEventListener('keydown', e => {
+            teclas[e.code] = true;
+            if ((e.code === 'KeyF' || e.code === 'Enter') && puedeDisparar && jugador.vidas > 0) {
+                disparar();
+                puedeDisparar = false;
+            }
+        });
+        window.addEventListener('keyup', e => {
+            teclas[e.code] = false;
+            if (e.code === 'KeyF' || e.code === 'Enter') puedeDisparar = true;
+        });
+
+        function disparar() {
+            const velBala = jugador.direccion === 'derecha' ? 10 : -10;
+            balas.push({
+                x: jugador.direccion === 'derecha' ? jugador.x + jugador.ancho : jugador.x - 10,
+                y: jugador.y + jugador.alto / 2 - 3,
+                ancho: 10, alto: 6, velocidadX: velBala
+            });
+        }
+
+        function regenerarEnemigo(idEnemigo) {
+            setTimeout(() => {
+                if (jugador.vidas <= 0) return;
+                const plantilla = datosEnemigos[idEnemigo];
+                enemigos.push({ ...plantilla });
+            }, 3000);
+        }
+
+        function reiniciarJugador() {
+            jugador.x = 50; jugador.y = 300; jugador.velocidadX = 0; jugador.velocidadY = 0;
+            document.getElementById('vidas').innerText = "Vidas: " + "❤️".repeat(jugador.vidas);
+        }
+
+        function actualizar() {
+            if (jugador.vidas <= 0) {
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.8)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = 'red'; ctx.font = '40px Arial'; ctx.textAlign = 'center';
+                ctx.fillText('FIN DEL JUEGO', canvas.width / 2, canvas.height / 2);
+                ctx.fillStyle = 'white'; ctx.font = '20px Arial';
+                ctx.fillText('Recarga la página para reiniciar', canvas.width / 2, canvas.height / 2 + 40);
+                return;
+            }
+
+            if (teclas['ArrowRight'] || teclas['KeyD']) { if (jugador.velocidadX < jugador.velocidadMax) jugador.velocidadX++; jugador.direccion = 'derecha'; }
+            if (teclas['ArrowLeft'] || teclas['KeyA']) { if (jugador.velocidadX > -jugador.velocidadMax) jugador.velocidadX--; jugador.direccion = 'izquierda'; }
+            if ((teclas['ArrowUp'] || teclas['Space'] || teclas['KeyW']) && jugador.enSuelo) { jugador.velocidadY = -jugador.fuerzaSalto; jugador.enSuelo = false; }
+
+            jugador.velocidadX *= friccion; jugador.velocidadY += gravedad;
+            jugador.x += jugador.velocidadX; jugador.y += jugador.velocidadY;
+
+            if (jugador.x < 0) jugador.x = 0;
+            if (jugador.x > canvas.width - jugador.ancho) jugador.x = canvas.width - jugador.ancho;
+
+            jugador.enSuelo = false;
+            plataformas.forEach(plat => {
+                if (jugador.x < plat.x + plat.ancho && jugador.x + jugador.ancho > plat.x && jugador.y < plat.y + plat.alto && jugador.y + jugador.alto > plat.y) {
+                    if (jugador.velocidadY > 0 && (jugador.y + jugador.alto - jugador.velocidadY) <= plat.y) {
+                        jugador.y = plat.y - jugador.alto; jugador.velocidadY = 0; jugador.enSuelo = true;
+                    }
+                }
+            });
+
+            for (let b = balas.length - 1; b >= 0; b--) {
+                balas[b].x += balas[b].velocidadX;
+                if (balas[b].x < 0 || balas[b].x > canvas.width) { balas.splice(b, 1); continue; }
+                for (let e = enemigos.length - 1; e >= 0; e--) {
+                    if (balas[b] && balas[b].x < enemigos[e].x + enemigos[e].ancho && balas[b].x + balas[b].ancho > enemigos[e].x && balas[b].y < enemigos[e].y + enemigos[e].alto && balas[b].y + balas[b].alto > enemigos[e].y) {
+                        let idMuerto = enemigos[e].id;
+                        enemigos.splice(e, 1); balas.splice(b, 1);
+                        jugador.puntos += 100;
+                        document.getElementById('puntos').innerText = "Puntos: " + jugador.puntos;
+                        regenerarEnemigo(idMuerto);
+                        break;
+                    }
+                }
+            }
+
+            enemigos.forEach(ene => {
+                ene.x += ene.velocidadX;
+                if (ene.x <= ene.inicioX || ene.x >= ene.finX) ene.velocidadX = -ene.velocidadX;
+                if (jugador.x < ene.x + ene.ancho && jugador.x + jugador.ancho > ene.x && jugador.y < ene.y + ene.alto && jugador.y + jugador.alto > ene.y) {
+                    jugador.vidas--; reiniciarJugador();
+                }
+            });
+
+            dibujar();
+            requestAnimationFrame(actualizar);
+        }
+
+        function dibujar() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#555'; plataformas.forEach(plat => ctx.fillRect(plat.x, plat.y, plat.ancho, plat.alto));
+            ctx.fillStyle = '#FFD700'; balas.forEach(b => ctx.fillRect(b.x, b.y, b.ancho, b.alto));
+            ctx.fillStyle = '#9400D3'; enemigos.forEach(ene => ctx.fillRect(ene.x, ene.y, ene.ancho, ene.alto));
+            ctx.fillStyle = '#00FFFF'; ctx.fillRect(jugador.x, jugador.y, jugador.ancho, jugador.alto);
+            ctx.fillStyle = '#FFF';
+            if (jugador.direccion === 'derecha') ctx.fillRect(jugador.x + jugador.ancho, jugador.y + 12, 8, 6);
+            else ctx.fillRect(jugador.x - 8, jugador.y + 12, 8, 6);
+        }
+
+        actualizar();
+    </script>
+</body>
+</html>
