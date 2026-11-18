@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia de Robleis</title>
+        
+        <link rel="stylesheet" href="style.css">
+<a href="index.html" class="volver">←</a>
+
+<h1>Preguntas sobre robleis.</h1>
+
+
+<div class="pregunta">
+    <h3>1. ¿Robleis es argentino?</h3>
+    <button class="verdadero" onclick="respuesta('r1', true)">Verdadero</button>
+    <button class="falso" onclick="respuesta('r1', false)">Falso</button>
+    <p id="r1"></p>
+</div>
+
+<div class="pregunta">
+    <h3>2. ¿El nombre real de Robleis es Matías Samuel Arbillaga?</h3>
+    <button class="verdadero" onclick="respuesta('r2', true)">Verdadero</button>
+    <button class="falso" onclick="respuesta('r2', false)">Falso</button>
+    <p id="r2"></p>
+</div>
+
+<div class="pregunta">
+    <h3>3. ¿Robleis nació en Chile?</h3>
+    <button class="verdadero" onclick="respuesta('r3', false)">Verdadero</button>
+    <button class="falso" onclick="respuesta('r3', true)">Falso</button>
+    <p id="r3"></p>
+</div>
+
+<div class="pregunta">
+    <h3>4. ¿Robleis también hace música?</h3>
+    <button class="verdadero" onclick="respuesta('r4', true)">Verdadero</button>
+    <button class="falso" onclick="respuesta('r4', false)">Falso</button>
+    <p id="r4"></p>
+</div>
+
+<div class="pregunta">
+    <h3>5. ¿Robleis comenzó creando contenido en YouTube?</h3>
+    <button class="verdadero" onclick="respuesta('r5', true)">Verdadero</button>
+    <button class="falso" onclick="respuesta('r5', false)">Falso</button>
+    <p id="r5"></p>
+</div>
+
+<style>
+.pregunta{
+    background: rgba(0,60,150,.55);
+    padding:20px;
+    margin:20px auto;
+    width:80%;
+    border-radius:15px;
+    box-shadow:0 0 15px #00aaff;
+}
+
+.verdadero{
+    background:#7CFC90;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:17px;
+    margin-right:10px;
+}
+
+.verdadero:hover{
+    background:#63e07a;
+}
+
+.falso{
+    background:#ff8a8a;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:17px;
+}
+
+.falso:hover{
+    background:#ff7070;
+}
+
+p{
+    font-weight:bold;
+    margin-top:15px;
+}
+</style>
+
+<script>
+function respuesta(id, correcta){
+
+    let texto = document.getElementById(id);
+
+    if(correcta){
+        texto.innerHTML = "✅ Correcto";
+        texto.style.color = "lime";
+    }else{
+        texto.innerHTML = "❌ Incorrecto";
+        texto.style.color = "#ff8080";
+    }
+
+}
+
+
+</script>
+

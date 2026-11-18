@@ -1,0 +1,673 @@
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ========================= */
+/* FONDO */
+/* ========================= */
+body{
+    margin:0;
+    overflow-x:hidden;
+    background:linear-gradient(to bottom,#020b2d,#082567,#0b3d91);
+    font-family:Arial, sans-serif;
+}
+
+.espacio{
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+/* ESTRELLAS */
+.estrellas{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-image:
+    radial-gradient(circle,#ffffff 1px,transparent 1px),
+    radial-gradient(circle,#7dd3fc 2px,transparent 2px),
+    radial-gradient(circle,#38bdf8 1px,transparent 1px);
+    background-size:120px 120px,180px 180px,250px 250px;
+    animation:mover 80s linear infinite;
+    opacity:.9;
+}
+
+@keyframes mover{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(300px);
+    }
+}
+
+/* PLANETAS */
+
+.planeta{
+    position:absolute;
+    border-radius:50%;
+    box-shadow:0 0 40px rgba(0,180,255,.6);
+}
+
+/* Planeta grande */
+.planeta1{
+    width:180px;
+    height:180px;
+    background:radial-gradient(circle at 30% 30%,#8bd3ff,#1e40af);
+    top:30px;
+    right:40px;
+}
+
+/* Planeta mediano */
+.planeta2{
+    width:90px;
+    height:90px;
+    background:radial-gradient(circle at 30% 30%,#9be7ff,#2563eb);
+    top:150px;
+    left:120px;
+}
+
+/* Planeta con anillo */
+.planeta3{
+    width:120px;
+    height:120px;
+    background:radial-gradient(circle at 30% 30%,#7dd3fc,#1d4ed8);
+    bottom:60px;
+    left:40px;
+}
+
+.planeta3::after{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:30px;
+    border:3px solid rgba(120,200,255,.7);
+    border-radius:50%;
+    top:45px;
+    left:-30px;
+    transform:rotate(-20deg);
+}
+body{
+    background-image:url("ChatGPT Image 9 jun 2026, 03_52_02 p.m..png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
+}
+
+/* Oscurece un poco el fondo */
+
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(rgba(0,20,70,.65),rgba(0,0,30,.70));
+    z-index:-1;
+}
+
+/* ========================= */
+/* MENÚ */
+/* ========================= */
+
+.menu{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    padding:18px;
+
+    background:rgba(0,25,70,.90);
+
+    box-shadow:0 0 25px #0099ff;
+
+    z-index:1000;
+}
+
+.menu a{
+
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+
+    padding:12px 20px;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+.menu a:hover{
+
+    background:#00aaff;
+
+    box-shadow:0 0 20px #00ccff;
+
+    transform:translateY(-4px);
+
+}
+
+/* ========================= */
+/* TITULOS */
+/* ========================= */
+
+h1{
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+h1{
+
+    margin-top:110px;
+
+    text-align:center;
+
+    color:#5fd6ff;
+
+    text-shadow:
+    0 0 10px #0099ff,
+    0 0 20px #0066ff;
+
+    margin-bottom:25px;
+
+}
+h1{
+    animation: aparecer 1s;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+h1:hover{
+    color: dodgerblue;
+}
+h1::after{
+    content:"";
+    display:block;
+    width:180px;
+    height:4px;
+    background:deepskyblue;
+    margin:15px auto;
+    border-radius:10px;
+}
+h1:hover{
+    text-shadow:
+    0 0 15px cyan,
+    0 0 30px deepskyblue,
+    0 0 50px blue;
+}
+
+h2{
+
+    text-align:center;
+
+    color:#8adfff;
+
+    text-shadow:0 0 10px #0099ff;
+
+    margin:30px 0;
+
+}
+
+
+/* ========================= */
+/* PARRAFOS */
+/* ========================= */
+
+p{
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.6;
+}
+p {
+    font-style: italic;
+}
+p {
+    font-family: "Monsieur La Douise", cursive;
+    font-size: 30px; /* Esta letra suele verse muy chica, así que le subimos el tamaño */
+}
+
+p{
+
+    width:85%;
+
+    margin:25px auto;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    background:rgba(0,40,100,.55);
+
+    box-shadow:
+    0 0 20px rgba(0,170,255,.5);
+
+    line-height:1.8;
+
+    transition:.3s;
+
+}
+p{
+    border-left: 6px solid deepskyblue;
+    padding-left: 10px;
+}
+p::first-letter{
+    font-size: 35px;
+    color: blue;
+}
+
+p:hover{
+
+    transform:scale(1.02);
+
+    box-shadow:0 0 30px #00aaff;
+
+}
+
+/* ========================= */
+/* LISTAS */
+/* ========================= */
+
+ol{
+
+    width:85%;
+
+    margin:auto;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    background:rgba(0,40,100,.55);
+
+    box-shadow:0 0 20px rgba(0,170,255,.5);
+
+}
+
+li{
+
+    margin-bottom:15px;
+
+}
+
+
+/* ========================= */
+/* IMAGENES */
+/* ========================= */
+
+img{
+
+    display:block;
+
+    width:85%;
+
+    max-width:700px;
+
+    margin:35px auto;
+
+    border-radius:20px;
+
+    box-shadow:0 0 25px #00aaff;
+
+    transition:.4s;
+
+}
+img{
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    margin: 20px auto;
+}
+img, p, ol{
+    border-radius: 15px;
+}
+
+img:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 40px #00d9ff;
+
+}
+.contenedor-imagen {
+    text-align: center; /* Centra la imagen horizontalmente */
+    margin-top: 20px;   /* Le da separación respecto al texto de arriba */
+}
+
+.contenedor-imagen img {
+    max-width: 100%;    /* Evita que la imagen se deforme o se salga de la pantalla */
+    height: auto;
+    border-radius: 10px; /* Opcional: le hace las esquinas redondeadas si quieres */
+}
+
+.foto{
+    width: 700px;   /* Más ancha */
+    height: 400px;  /* Más alta */
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 20px deepskyblue;
+}
+
+/* ========================= */
+/* BOTONES */
+/* ========================= */
+
+button{
+
+    background:#008cff;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+button:hover{
+    box-shadow: 0 0 20px cyan;
+}
+
+button,
+img,
+p,
+ol{
+    border-radius:25px;
+}
+
+
+
+button:hover{
+
+    background:#00aaff;
+
+    box-shadow:0 0 20px #00d9ff;
+
+    transform:scale(1.08);
+
+}
+button{
+    transition: 0.3s;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+
+    button {
+  background: #00aaff;
+  color: rgb(91, 133, 224);
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
+
+
+
+/* ========================= */
+/* ENLACES */
+/* ========================= */
+
+a{
+
+    color:#8adfff;
+
+}
+
+a:hover{
+
+    color:white;
+
+}
+
+/* ========================= */
+/* BOTÓN VOLVER ARRIBA */
+/* ========================= */
+
+#volverInicio{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    background:#008cff;
+
+    color:white;
+
+    padding:15px 20px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    box-shadow:0 0 20px #00aaff;
+
+    transition:.3s;
+
+}
+
+#volverInicio:hover{
+
+    background:#00aaff;
+
+    transform:scale(1.1);
+
+}
+
+/* ========================= */
+/* SCROLL */
+/* ========================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#00142e;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#00aaff;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#00d9ff;
+
+}
+
+/* ========================= */
+/* CELULARES */
+/* ========================= */
+
+@media(max-width:768px){
+
+.menu{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.menu a{
+
+    width:90%;
+
+    text-align:center;
+
+}
+.menu{
+    backdrop-filter: blur(10px);
+}
+
+h1{
+
+    font-size:30px;
+
+}
+
+p,
+ol{
+
+    width:95%;
+
+}
+
+}
+.volver{
+    position: fixed;
+    top: 90px;
+    left: 20px;
+    width: 55px;
+    height: 55px;
+    background: #008cff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    box-shadow: 0 0 20px #00aaff;
+    transition: 0.3s;
+    z-index: 9999;
+}
+
+.volver:hover{
+    background: #00aaff;
+    transform: scale(1.15);
+    box-shadow: 0 0 30px #00d9ff;
+}
+section:hover{
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+body{
+    background-color: #f8fbff;
+}
+
+/* DISEÑO DEL SLIDER */
+.slider-container {
+    position: relative;
+    max-width: 800px; /* O el tamaño que uses */
+    margin: auto;
+    overflow: hidden; /* Esto es vital para ocultar el resto */
+    padding: 0; /* Asegúrate de que esté en 0 */
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slider-track img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+    height: 400px; /* O el alto que tú hayas elegido */
+    
+    /* AGREGA ESTAS DOS LÍNEAS */
+    box-sizing: border-box;
+    display: block; 
+    margin-right: -1px;
+}
+
+.btn-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.btn-nav:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.btn-prev { left: 10px; }
+.btn-next { right: 10px; }
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #00d2ff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #00d2ff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00d2ff, 0 0 20px #00d2ff;
+  animation: blinkDot 1.5s ease-in-out infinite;
+}
+
+@keyframes blinkDot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 5px #00d2ff, 0 0 10px #00d2ff;
+  }
+  50% {
+    transform: scale(0.8);
+    opacity: 0.4;
+    box-shadow: 0 0 2px #00d2ff;
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+  
+    
+<a href="index.html" class="volver">←</a>
+<h1>Galeria de Robleis Adrillaga</h1>
+
+<div class="slider-container">
+    <div class="slider-track">
+        <img src="imagenes/robleis (2).jpg" alt="roblesi">
+        <img src="imagenes/robleis_ardillaga.webp" alt="robleis">
+        <img src="imagenes/ChatGPT Image 9 jun 2026, 03_52_02 p.m..png" alt="robleis">
+         <img src="imagenes/robleis_canciones.webp" alt="robleis">
+    </div>
+
+    <button class="btn-nav btn-prev" onclick="moverSlider(-1)">&#10094;</button>
+    <button class="btn-nav btn-next" onclick="moverSlider(1)">&#10095;</button>
+</div>
+
+
+<script>
+        let index = 0;
+
+        function moverSlider(direccion) {
+            const track = document.querySelector('.slider-track');
+            const imagenes = document.querySelectorAll('.slider-track img');
+            const totalImagenes = imagenes.length;
+
+            index += direccion;
+
+            if (index >= totalImagenes) {
+                index = 0;
+            }
+            if (index < 0) {
+                index = totalImagenes - 1;
+            }
+
+            const desplazamiento = -index * 100;
+            track.style.transform = `translateX(${desplazamiento}%)`;
+        }
+        
+        // Opcional: Descomenta la línea de abajo si quieres que se mueva solo cada 3 segundos
+        // setInterval(() => moverSlider(1), 3000);
+    </script>
+</body>
+
+</body>
+</html>

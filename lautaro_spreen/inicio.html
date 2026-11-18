@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portada | El Universo de Spreen</title>
+    <style>
+        /* Estilos Generales */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0c0f12; /* Fondo oscuro estilo Gamer */
+            color: #ffffff;
+            scroll-behavior: smooth;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* BARRA DE NAVEGACIÓN (Arriba) */
+        .navbar {
+            background-color: #161b22;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: center; /* Centra los botones en la barra */
+            gap: 20px;               /* Separación entre los botones */
+            position: sticky;        /* Se queda fija arriba al bajar la página */
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            border-bottom: 1px solid #21262d;
+        }
+
+        /* TU BOTÓN BRILLANTE */
+        .btn-brillante {
+            background-color: transparent;
+            border: 2px solid #10b981; /* Verde esmeralda estilo Kick */
+            border-radius: 5px;
+            padding: 10px 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-brillante a {
+            color: #10b981;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Efecto de brillo al tocar o pasar el cursor */
+        .btn-brillante:hover, .btn-brillante:active {
+            background-color: #10b981;
+            box-shadow: 0 0 10px #10b981, 0 0 25px #10b981;
+        }
+
+        .btn-brillante:hover a, .btn-brillante:active a {
+            color: #0c0f12; /* El texto se vuelve oscuro al brillar el botón */
+        }
+
+        /* DISEÑO DE LA PORTADA HERO */
+        .hero-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 900px;
+            background-color: #161b22;
+            padding: 60px 40px;
+            border-radius: 16px;
+            border: 1px solid #21262d;
+            border-top: 4px solid #10b981; /* Detalle de color característico arriba */
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        /* TÍTULO PRINCIPAL GIGANTE */
+        .hero-title {
+            color: #10b981;
+            font-size: 72px;
+            font-weight: 900;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            margin-bottom: 40px;
+        }
+
+        .hero-description {
+            font-size: 19px;
+            line-height: 1.8;
+            color: #d1d5db;
+            margin: 0 auto;
+            max-width: 700px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <button class="btn-brillante">
+            <a href="index.html">Inicio</a>
+        </button>
+        
+        <button class="btn-brillante">
+            <a href="historia.html">Historia</a>
+        </button>
+
+        <button class="btn-brillante">
+            <a href="porqueesyoutuber.html">¿Por qué se dedicó?</a>
+        </button>
+    </nav>
+
+    <main class="hero-section">
+        <div class="hero-container">
+            <h1 class="hero-title">SPREEN</h1>
+            <div class="hero-subtitle">Los Inicios: De Santa Fe al Mundo</div>
+
+            <div class="hero-description">
+
+                <p class="hero-description">
+                    Todo empieza por un viaje Para Iván Buhajeruk. la aventura digital comenzó en su Santa Fe natal, donde la curiosidad y las ganas de crear lo llevaron a subir sus primeros videos a internet a una edad muy temprana.
+                </p>
+            </div>
+
+            <div class="hero-description">
+
+                <p class="hero-description">
+                    Lejos de los grandes escenarios y los millones de seguidores actuales, sus comienzos estuvieron marcados por la edición independiente, el diseño y, sobre todo, por tardes enteras explorando y construyendo mundos en Minecraft. Con herramientas sencillas pero una creatividad enorme, Iván empezó a moldear lo que más tarde se convertiría en su marca registrada: un estilo dinámico, divertido y con una conexión única con su comunidad. Aquellos primeros directos y videos grabados desde su habitación fueron los cimientos de un imperio digital que no pararía de crecer.
+                    </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

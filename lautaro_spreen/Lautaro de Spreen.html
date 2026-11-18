@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicios | El Universo de Spreen</title>
+    <style>
+        /* Estilos Generales */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0c0f12; /* Mismo fondo oscuro estilo Gamer */
+            color: #ffffff;
+            scroll-behavior: smooth;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* BARRA DE NAVEGACIÓN (Arriba) */
+        .navbar {
+            background-color: #161b22;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            border-bottom: 1px solid #21262d;
+        }
+
+        .btn-brillante {
+            background-color: transparent;
+            border: 2px solid #10b981; /* Verde esmeralda estilo Kick */
+            border-radius: 5px;
+            padding: 10px 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-brillante a {
+            color: #10b981;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-brillante:hover, .btn-brillante:active {
+            background-color: #10b981;
+            box-shadow: 0 0 10px #10b981, 0 0 25px #10b981;
+        }
+
+        .btn-brillante:hover a, .btn-brillante:active a {
+            color: #0c0f12;
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+        .seccion-inicios {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .contenedor-bloque {
+            max-width: 900px;
+            background-color: #161b22;
+            padding: 50px 40px;
+            border-radius: 16px;
+            border: 1px solid #21262d;
+            border-top: 4px solid #10b981;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        /* TEXTO DE LOS INICIOS */
+        .titulo-inicios {
+            color: #10b981;
+            font-size: 36px;
+            font-weight: 800;
+            margin: 0 0 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .descripcion-inicios {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #d1d5db;
+            margin-bottom: 35px;
+            text-align: justify;
+        }
+
+        /* CONTENEDOR DEL COLLAGE ÚNICO */
+        .contenedor-collage {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .contenedor-collage img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 2px solid #21262d;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        /* Brillo verde gamer al pasar el cursor sobre todo el collage */
+        .contenedor-collage img:hover {
+            border-color: #10b981;
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <button class="btn-brillante">
+            <a href="inicio.html">El comienzo</a>
+        </button>
+        <button class="btn-brillante">
+            <a href="historia.html">Historia</a>
+        </button>
+        <button class="btn-brillante">
+            <a href="porqueesyoutuber.html">¿Por qué se dedicó?</a>
+        </button>
+    </nav>
+
+    <main class="seccion-inicios">
+        <div class="contenedor-bloque">
+            
+            <h2 class="titulo-inicios">SPREEN</h2>
+
+            <div class="contenedor-collage">
+                <img src="Spreen.png" alt="Mosaico unificado de imágenes de Spreen sobre fondo oscuro gamer." width="600">
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
