@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="stayle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sus canciones</title>
+</head>
+<body>
+    
+    <h1>trivia para Blinks</h1
+        
+    
+    
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trivia Blink</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom,#000,#ff69b4);
+    color:white;
+    text-align:center;
+}
+
+.trivia{
+    width:700px;
+    margin:auto;
+    margin-top:40px;
+    background:#111;
+    border:4px solid hotpink;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 0 20px hotpink;
+}
+
+h1{
+    color:hotpink;
+}
+
+button{
+    width:90%;
+    padding:15px;
+    margin:8px;
+    font-size:18px;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+    background:white;
+}
+
+button:hover{
+    background:hotpink;
+    color:white;
+}
+
+#resultado{
+    font-size:22px;
+    margin-top:20px;
+    color:#00ff66;
+}
+
+#siguiente{
+    background:hotpink;
+    color:white;
+    display:none;
+}
+</style>
+
+</head>
+<body>
+
+<div class="trivia">
+
+<h1>💗🖤 Trivia Blink 🖤💗</h1>
+
+<h2 id="pregunta"></h2>
+
+<div id="opciones"></div>
+
+<h3 id="resultado"></h3>
+
+<button id="siguiente" onclick="siguientePregunta()">Siguiente ➜</button>
+
+</div>
+
+<script>
+
+const preguntas=[
+
+{
+pregunta:"¿En qué año debutó BLACKPINK?",
+opciones:["2014","2015","2016","2017"],
+correcta:2
+},
+
+{
+pregunta:"¿Cómo se llama el fandom oficial?",
+opciones:["Army","Blink","Once","Stay"],
+correcta:1
+},
+
+{
+pregunta:"¿Quién es la maknae?",
+opciones:["Jisoo","Jennie","Rosé","Lisa"],
+correcta:3
+},
+
+{
+pregunta:"¿Quién nació en Tailandia?",
+opciones:["Lisa","Jennie","Rosé","Jisoo"],
+correcta:0
+},
+
+{
+pregunta:"¿Nombre real de Lisa?",
+opciones:["Jennie Kim","Kim Ji-soo","Roseanne Park","Lalisa Manobal"],
+correcta:3
+},
+
+{
+pregunta:"¿Nombre real de Rosé?",
+opciones:["Roseanne Park","Jennie Kim","Kim Ji-soo","Lalisa Manobal"],
+correcta:0
+},
+
+{
+pregunta:"¿Nombre real de Jisoo?",
+opciones:["Kim Ji-soo","Jennie Kim","Lalisa Manobal","Roseanne Park"],
+correcta:0
+},
+
+{
+pregunta:"¿Nombre real de Jennie?",
+opciones:["Jennie Kim","Kim Ji-soo","Lalisa Manobal","Roseanne Park"],
+correcta:0
+},
+
+{
+pregunta:"¿Cuántas integrantes tiene BLACKPINK?",
+opciones:["3","4","5","6"],
+correcta:1
+},
+
+{
+pregunta:"¿Qué empresa creó a BLACKPINK?",
+opciones:["HYBE","YG Entertainment","SM","JYP"],
+correcta:1
+},
+
+{
+pregunta:"¿Canción del debut?",
+opciones:["Pink Venom","Kill This Love","Boombayah","Shut Down"],
+correcta:2
+},
+
+{
+pregunta:"¿Qué integrante es actriz?",
+opciones:["Jisoo","Lisa","Rosé","Jennie"],
+correcta:0
+},
+
+{
+pregunta:"¿Quién debutó primero como solista?",
+opciones:["Lisa","Rosé","Jennie","Jisoo"],
+correcta:2
+},
+
+{
+pregunta:"¿Quién toca guitarra y piano?",
+opciones:["Jennie","Rosé","Lisa","Jisoo"],
+correcta:1
+},
+
+{
+pregunta:"¿Primer álbum de estudio?",
+opciones:["Born Pink","The Album","Square Up","Kill This Love"],
+correcta:1
+},
+
+{
+pregunta:"¿Qué canción dice 'Blackpink in your area'?",
+opciones:["Boombayah","Stay","Playing With Fire","As If It's Your Last"],
+correcta:0
+},
+
+{
+pregunta:"¿Festival que encabezó BLACKPINK?",
+opciones:["Tomorrowland","Lollapalooza","Coachella","Ultra"],
+correcta:2
+},
+
+{
+pregunta:"¿Qué colores representan el nombre BLACKPINK?",
+opciones:["Rojo y Negro","Negro y Rosa","Azul y Blanco","Amarillo y Negro"],
+correcta:1
+},
+
+{
+pregunta:"¿Quién es conocida por su gran habilidad para bailar?",
+opciones:["Rosé","Lisa","Jisoo","Jennie"],
+correcta:1
+},
+
+{
+pregunta:"¿Qué significa BLACKPINK?",
+opciones:[
+"Solo representa el color rosa",
+"La belleza y la fuerza pueden ir juntas",
+"No tiene significado",
+"Es el nombre de una canción"],
+correcta:1
+}
+
+];
+
+let indice=0;
+let puntos=0;
+
+function mostrarPregunta(){
+
+document.getElementById("resultado").innerHTML="";
+document.getElementById("siguiente").style.display="none";
+
+document.getElementById("pregunta").innerHTML=(indice+1)+". "+preguntas[indice].pregunta;
+
+let html="";
+
+preguntas[indice].opciones.forEach((opcion,i)=>{
+
+html+=`<button onclick="responder(${i})">${opcion}</button>`;
+
+});
+
+document.getElementById("opciones").innerHTML=html;
+
+}
+
+function responder(i){
+
+if(i===preguntas[indice].correcta){
+
+document.getElementById("resultado").innerHTML="✅ ¡Correcto!";
+puntos++;
+
+}else{
+
+document.getElementById("resultado").innerHTML="❌ Incorrecto.";
+}
+
+document.getElementById("siguiente").style.display="inline-block";
+
+}
+
+function siguientePregunta(){
+
+indice++;
+
+if(indice<preguntas.length){
+
+mostrarPregunta();
+
+}else{
+
+document.querySelector(".trivia").innerHTML=
+
+`<h1>💗 Resultado Final 💗</h1>
+
+<h2>Obtuviste ${puntos} de ${preguntas.length} respuestas correctas.</h2>
+
+<h2>${puntos>=16?"🌟 ¡Eres una verdadera Blink!":
+puntos>=10?"💗 ¡Sabes bastante sobre BLACKPINK!":
+"🖤 Sigue aprendiendo más sobre BLACKPINK."}</h2>`;
+
+}
+
+}
+
+mostrarPregunta();
+
+</script>
+<a href="index.html" class="inicio">🏠 Volver al inicio</a>
+
+</body>
+</html>
