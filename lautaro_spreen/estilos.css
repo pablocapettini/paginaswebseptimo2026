@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0c0f12;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* BARRA DE NAVEGACIÓN */
+.navbar {
+    background-color: #161b22;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid #21262d;
+}
+
+.btn-brillante {
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid #10b981;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #10b981;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-brillante:hover, .btn-brillante.activo {
+    background-color: #10b981;
+    color: #0c0f12;
+    box-shadow: 0 0 10px #10b981, 0 0 25px #10b981;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor-principal {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.contenedor-bloque {
+    max-width: 850px;
+    width: 100%;
+    background-color: #161b22;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid #21262d;
+    border-top: 4px solid #10b981;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* PORTADA */
+.hero-title {
+    color: #10b981;
+    font-size: 64px;
+    font-weight: 900;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    text-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.titulo-seccion {
+    color: #10b981;
+    font-size: 30px;
+    font-weight: 800;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.texto-parrafo {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #d1d5db;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* COLLAGE */
+.contenedor-collage {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.contenedor-collage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid #21262d;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.contenedor-collage img:hover {
+    border-color: #10b981;
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.4);
+}
+
+/* LÍNEA DE TIEMPO (HISTORIA) */
+.timeline {
+    list-style: none;
+    position: relative;
+    border-left: 3px solid #10b981;
+    margin: 20px auto 0 auto;
+    padding: 10px 0;
+    width: 92%;
+}
+
+.timeline-item {
+    padding: 20px 25px;
+    position: relative;
+    background-color: #0c0f12;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #21262d;
+    margin-left: 20px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #10b981;
+    border-radius: 50%;
+    left: -30px;
+    top: 24px;
+    box-shadow: 0 0 10px #10b981;
+}
+
+.timeline-year {
+    font-size: 19px;
+    font-weight: bold;
+    color: #10b981;
+    margin: 0 0 8px 0;
+}
+
+.timeline-text {
+    font-size: 16px;
+    color: #d1d5db;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* LISTA DE MOTIVOS */
+.lista-motivos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-motivos li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #d1d5db;
+    margin-bottom: 20px;
+    padding-left: 28px;
+    position: relative;
+}
+
+.lista-motivos li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: bold;
+}
+
+.lista-motivos strong {
+    color: #ffffff;
+}
+
+/* FIRMA DEL CREADOR */
+.firma-creador {
+    margin-top: 35px;
+    text-align: center;
+    border-top: 1px solid #21262d;
+    padding-top: 15px;
+}
+
+.firma-creador p {
+    color: #8b949e;
+    font-size: 14px;
+    margin: 0;
+}
+
+.firma-creador span {
+    color: #10b981;
+    font-weight: bold;
+}
