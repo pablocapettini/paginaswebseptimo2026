@@ -1,0 +1,1084 @@
+h1 {
+    color: gold;
+}
+
+body{
+    background: url(andrei-castanha-mAoMkGo4LGg-unsplash.jpg);
+
+    display: flex;
+    flex-direction: column; /* Coloca los elementos uno debajo del otro */
+    align-items: center;    /* Centra los elementos de forma horizontal */
+    justify-content: center;/* Centra los elementos de forma vertical */
+    min-height: 100vh;      /* Hace que el fondo ocupe toda la altura de la pantalla */
+    margin: 0;              /* Elimina los márgenes que vienen por defecto */
+}
+
+h2{
+    font-family: "Black Ops One";
+}
+
+p{
+    color: black;
+}
+
+h2{ 
+    color: black;
+}
+
+ol{color: black;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%; /* 1000 */
+}
+button{
+    align-items: center;
+}
+        
+
+
+        /* Contenedor del menú */
+.bio-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre cada botón */
+    max-width: 400px; /* Ancho máximo del menú */
+    margin: 20px auto; /* Centra el menú en la pantalla */
+}
+
+
+
+/* Estilo de cada botón */
+.menu-btn {
+    background-color: #222;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    border: 2px solid #f1c40f; /* Borde dorado */
+    border-radius: 50px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Hace la animación suave */
+}
+
+/* Efecto cuando pasas el mouse por encima */
+.menu-btn:hover {
+    background-color: #f1c40f; /* Cambia a fondo dorado */
+    color: #111; /* Letras oscuras al resaltar */
+    transform: scale(1.05); /* Se agranda un poquito */
+    box-shadow: 0px 0px 15px #f1c40f; /* Brillo dorado */
+}
+
+/* Barra de navegación recta */
+.menu-recto {
+    display: flex;
+    justify-content: center; /* Centra las opciones horizontalmente */
+    background-color: #111111; /* Negro puro */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    margin: 0;
+    padding: 0;
+    border-top: 3px solid #f1c40f; /* Línea recta dorada arriba */
+    border-bottom: 3px solid #f1c40f; /* Línea recta dorada abajo */
+}
+
+/* Opciones del menú */
+.enlace-menu {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase; /* Letras en mayúscula */
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 20px 25px; /* Espacio interno para hacerlos clickeables */
+    transition: background 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.enlace-menu:hover {
+    background-color: #222222; /* Gris oscuro al pasar el cursor */
+    color: #f1c40f; /* El texto cambia a dorado */
+}
+
+
+.bio-menu {
+    display: flex;
+    flex-direction: row;     /* Cambia 'column' por 'row' para alinearlos de lado */
+    justify-content: center; /* Los centra a todos en el medio de la pantalla */
+    gap: 10px;               /* Espacio plano entre cada botón */
+    width: 100%;             /* Ocupa el ancho plano */
+    margin: 10px 0;
+}
+
+
+
+
+.boton-youtube {
+  display: inline-block;
+  padding: 12px 26px;
+  background-color: #e50914; /* Rojo llamativo */
+  color: #ffffff;            /* Texto blanco */
+  font-weight: bold;
+  text-decoration: none;     /* Quita el subrayado común de los links */
+  border-radius: 50px;       /* Bordes completamente redondeados estilo píldora */
+  font-family: Arial, sans-serif;
+  transition: all 0.3s ease; /* Hace que cualquier movimiento sea suave */
+}
+
+/* Efecto cuando el usuario pasa el cursor por encima (Hover) */
+.boton-youtube:hover {
+  transform: scale(1.1);     /* El botón se agranda un 10% */
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.8); /* Crea un resplandor rojo de fondo */
+}
+
+
+
+
+.boton-instagram {
+  display: inline-block;
+  padding: 12px 26px;
+  background-color: #e1306c; /* El color rosa/magenta icónico de Instagram */
+  color: #ffffff;            /* Texto blanco */
+  font-weight: bold;
+  text-decoration: none;     /* Quita el subrayado */
+  border-radius: 50px;       /* Bordes redondeados */
+  font-family: Arial, sans-serif;
+  transition: all 0.3s ease; /* Movimiento suave */
+}
+
+/* Efecto cuando el usuario pasa el cursor por encima (Hover) */
+.boton-instagram:hover {
+  transform: scale(1.1);     /* El botón se agranda un 10% */
+  box-shadow: 0 0 20px rgba(225, 48, 108, 0.8); /* Resplandor rosa de fondo */
+}
+
+
+
+
+
+.foto-suave {
+  width: 300px;       /* El ancho que prefieras para tu foto */
+  border-radius: 20px; /* Controla qué tan redonda es la punta. ¡Prueba con 10px, 15px o 30px! */
+}
+
+
+body {
+  background-color: #111111; /* Negro sueva */
+  color: #ffffff;            /* Hace que todo el texto de la página sea blanco por defecto */
+  font-family: sans-serif;   /* Una letra limpia y fácil de leer */
+  padding: 40px;
+}
+
+
+.contenedor-botones {
+  display: flex;
+  flex-direction: column; /* Alinea los botones uno abajo del otro */
+  gap: 15px;             /* Aquí controlas la separación exacta (puedes cambiar el 15px) */
+  align-items: center;   /* Centra los botones horizontalmente */
+}
+
+
+
+
+
+
+
+
+
+
+
+.btn-rojo {
+  margin-bottom: 15px; /* Empuja el botón de abajo hacia abajo */
+  display: inline-block; /* Asegura que el margen funcione correctamente */
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .contenedor {
+    width: 95%;
+    margin: auto;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+
+.discos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.discos img {
+  width: 180px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.discos img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .discos img {
+    width: 120px;
+  }
+}
+
+
+
+
+.boton-flotante {
+    position: fixed; /* Hace que siempre quede en la pantalla */
+    bottom: 20px;    /* Distancia desde abajo */
+    right: 20px;     /* Distancia desde la derecha */
+    background: #d40000;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    z-index: 9999;   /* Para que quede por encima de todo */
+}
+
+.boton-flotante:hover {
+    background: #a00000;
+}
+
+
+
+
+
+/* El cuadro contenedor */
+.cuadro-estetico {
+    max-width: 300px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    text-align: center;
+    border: 1px solid #eaeaea;
+}
+
+/* Texto de arriba (opcional) */
+.cuadro-estetico p {
+    font-family: sans-serif;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* El botón de inicio */
+.btn-inicio {
+    display: inline-block;
+    padding: 12px 28px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #000000; /* Negro estético */
+    border-radius: 50px;
+    transition: all 0.2s ease;
+}
+
+/* Efecto al pasar el mouse por encima */
+.btn-inicio:hover {
+    background-color: #333333;
+    transform: scale(1.03); /* Se agranda un poquito */
+}
+
+
+
+/* La cajita de color de fondo */
+.caja-contenedor {
+    background-color: #f0f4f8; /* El color de fondo de la cajita (azul grisáceo suave) */
+    padding: 20px;
+    border-radius: 12px; /* Bordes redondeados de la caja */
+    display: inline-block; /* Para que la caja se ajuste al tamaño del botón */
+    border: 2px solid #e2e8f0; /* Un borde sutil para que marque la forma */
+}
+
+/* El botón que va adentro */
+.btn-regresar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3b82f6; /* Color azul del botón */
+    color: white; /* Letras blancas */
+    text-decoration: none; /* Quita la línea de abajo del enlace */
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 8px; /* Bordes redondeados del botón */
+    transition: background 0.2s;
+}
+
+/* Efecto cuando pasas el mouse por encima del botón */
+.btn-regresar:hover {
+    background-color: #1d4ed8; /* Azul más oscuro al pasar el cursor */
+}
+
+
+
+
+
+/* Contenedor para centrar los botones */
+.contenedor-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+/* Diseño base de los botones */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px; 
+    transition: transform 0.2s;
+}
+
+/* Efecto al pasar el mouse */
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Color de Instagram (Degradado original) */
+.btn-instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+/* Color de YouTube (Rojo) */
+.btn-youtube {
+    background-color: #FF0000;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

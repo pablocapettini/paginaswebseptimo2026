@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexis cucho</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <img src="imagenes/opm54.png" alt="canserbero"width = "1000">
+ 
+<body>
+
+    <div class="menu">
+        <button onclick="window.location.href='hitotia.html'">Historia</button>
+        <button onclick="window.location.href='musicas.html'">Canciones</button>
+    </div>
+    <style>
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+body{
+    margin-top: 60px;
+}
+
+
+</style>
+
+
+
+<button onclick="document.getElementById('musica').play()">
+    ▶ Reproducir
+</button>
+
+<button onclick="document.getElementById('musica').pause()">
+    ⏸ Pausar
+</button>
+
+<audio id="musica">
+    <source src="canserbero.mp3" type="audio/mpeg">
+    Tu navegador no soporta el audio.
+</audio>
+
+
+<nav class="menu">
+    
+    <a href="hitotia.html" class="btn-nav">📖 Historia</a>
+    <a href="musicas.html" class="btn-nav">🎵 Canciones</a>
+</nav>
+
+
+
