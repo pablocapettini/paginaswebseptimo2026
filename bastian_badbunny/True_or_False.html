@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Bunny - Trivia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="rabbit-face_1f430.png">
+</head>
+<body>
+
+<div class="quiz-section">
+    <h2>Trivia: ¿Verdadero o Falso? 🤔</h2>
+    <p>¡Responde estas preguntas basadas en la información de arriba!</p>
+
+    <div class="question-card">
+        <p><strong>1. ¿El verdadero nombre de Bad Bunny es Benito Antonio Martínez Ocasio?</strong></p>
+        <button class="btn-true" onclick="checkAnswer(1, true)">Verdadero</button>
+        <button class="btn-false" onclick="checkAnswer(1, false)">Falso</button>
+        <p id="feedback-1" class="feedback-text"></p>
+    </div>
+
+    <div class="question-card">
+        <p><strong>2. ¿Bad Bunny nació en San Juan, Puerto Rico?</strong></p>
+        <button class="btn-true" onclick="checkAnswer(2, true)">Verdadero</button>
+        <button class="btn-false" onclick="checkAnswer(2, false)">Falso</button>
+        <p id="feedback-2" class="feedback-text"></p>
+    </div>
+
+    <div class="question-card">
+        <p><strong>3. Durante su juventud (2012–2016), ¿él trabajaba en un supermercado mientras escribía canciones?</strong></p>
+        <button class="btn-true" onclick="checkAnswer(3, true)">Verdadero</button>
+        <button class="btn-false" onclick="checkAnswer(3, false)">Falso</button>
+        <p id="feedback-3" class="feedback-text"></p>
+    </div>
+
+    <div class="question-card">
+        <p><strong>4. ¿Su primera canción en hacerlo saltar a la fama fue 'Diles'?</strong></p>
+        <button class="btn-true" onclick="checkAnswer(4, true)">Verdadero</button>
+        <button class="btn-false" onclick="checkAnswer(4, false)">Falso</button>
+        <p id="feedback-4" class="feedback-text"></p>
+    </div>
+
+    <div class="question-card">
+        <p><strong>5. Según la lista de mejores discos, ¿'Oasis' es el número uno?</strong></p>
+        <button class="btn-true" onclick="checkAnswer(5, true)">Verdadero</button>
+        <button class="btn-false" onclick="checkAnswer(5, false)">Falso</button>
+        <p id="feedback-5" class="feedback-text"></p>
+    </div>
+</div>
+
+<a href="index.html" class="btn-float">🏠</a>
+
+<script>
+    function checkAnswer(questionNum, userChoice) {
+        const feedback = document.getElementById(`feedback-${questionNum}`);
+        
+        if (questionNum === 1) {
+            if (userChoice === true) {
+                feedback.innerHTML = "¡Correcto! 🐰 Su nombre real es Benito Antonio Martínez Ocasio.";
+                feedback.style.color = "#28a745";
+            } else {
+                feedback.innerHTML = "Incorrecto. ¡Sí se llama así! Lo dice al inicio del texto.";
+                feedback.style.color = "#dc3545";
+            }
+        }
+        
+        if (questionNum === 2) {
+            if (userChoice === false) {
+                feedback.innerHTML = "¡Correcto! 📍 Nació en Vega Baja, no en San Juan.";
+                feedback.style.color = "#28a745";
+            } else {
+                feedback.innerHTML = "Incorrecto. Él nació en Vega Baja.";
+                feedback.style.color = "#dc3545";
+            }
+        }
+
+        if (questionNum === 3) {
+            if (userChoice === true) {
+                feedback.innerHTML = "¡Correcto! 🛒 Trabajó en un supermercado antes de su éxito mundial.";
+                feedback.style.color = "#28a745";
+            } else {
+                feedback.innerHTML = "Incorrecto. Es verdadero, estudiaba y trabajaba en un súper.";
+                feedback.style.color = "#dc3545";
+            }
+        }
+
+        if (questionNum === 4) {
+            if (userChoice === true) {
+                feedback.innerHTML = "¡Correcto! 🎤 Saltó a la fama gracias a la canción 'Diles'.";
+                feedback.style.color = "#28a745";
+            } else {
+                feedback.innerHTML = "Incorrecto. Sí fue 'Diles', lo indica en la sección de 2016-2018.";
+                feedback.style.color = "#dc3545";
+            }
+        }
+
+        if (questionNum === 5) {
+            if (userChoice === false) {
+                feedback.innerHTML = "¡Correcto! 🔥 El número uno es 'Un Verano Sin Ti'. 'Oasis' está en el puesto 7.";
+                feedback.style.color = "#28a745";
+            } else {
+                feedback.innerHTML = "Incorrecto. El número uno de la lista es 'Un Verano Sin Ti'.";
+                feedback.style.color = "#dc3545";
+            }
+        }
+    }
+</script>
+
+<footer style="text-align: center; padding: 20px; font-size: 0.85em; color: #777; line-height: 1.5;">
+        © 2026 - Hecho con ⚡ por Bastian Cornelio<br>
+        Escuela 9 D.E. 7 | 7mo Grado
+</footer>
+</body>
+</html>

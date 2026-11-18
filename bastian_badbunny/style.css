@@ -1,0 +1,301 @@
+body{
+  background: linear-gradient(to top, #2E0854, #C77DFF);
+}
+h1{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 55px;
+    color: lightblue;
+}
+p{
+    margin: 25px;
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    color: lightblue;
+    font-style: italic;
+}
+h2{
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: lightblue;
+    text-align: center;
+    font-size: 35px;
+}
+ul, ol {
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: lightblue;
+    text-align: left;
+}
+li{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: lightblue;
+}
+h3{
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: lightblue;
+    text-align: center;
+    font-size: 35px;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    background: linear-gradient(to top, #2E0854, #C77DFF);
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li a {
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+nav ul li a:hover {
+    background-color: #6f42c1;
+    border-radius: 10px;
+}
+
+/* --- ESTILOS GLOBALES PARA BOTONES Y TRIVIA --- */
+
+/* Hereda automáticamente la fuente Gill Sans en botones y enlaces */
+button, .btn-back {
+    font-family: inherit;
+}
+
+/* Botón llamativo de Volver al Inicio */
+.btn-back {
+    display: inline-block;
+    background-color: #6f42c1;
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.btn-back:hover {
+    background-color: #5a32a3;
+    transform: scale(1.05);
+}
+
+/* Sección de la Trivia */
+.quiz-section {
+    margin: 25px;
+}
+.question-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo sutil para que resalte el texto */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 6px solid #6f42c1;
+    border-radius: 8px;
+}
+.question-card p strong {
+    color: lightblue;
+    font-size: 24px;
+}
+.btn-true {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-right: 10px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+.btn-true:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+.btn-false {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+.btn-false:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+.feedback-text {
+    font-weight: bold;
+    margin-top: 12px;
+    font-size: 20px;
+}
+img{
+    font-size: 300px;
+    border-color: #111;
+    border-style: double;
+    border-width: 20px;
+
+}
+
+.imagenes img {
+    width: 600x;
+    height: 600px;
+}
+.box {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    transform: scale(1.2);
+    color: white;
+}
+nav ul li a:hover {
+    transform: scale(1.2);
+}
+.btn-float {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #8a2be2;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 0 15px #8a2be2;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.btn-float:hover {
+    transform: scale(1.15);
+    background-color: #a855f7;
+}
+
+
+.btn-back:hover {
+    transform: scale(1.20);
+    background-color:#6f42c1 ;
+}
+.box {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+
+    background-image: url("morado\ collage.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+.social-container {
+    /* 1. CENTRADO HORIZONTAL ABAJO DEL MENÚ */
+    display: flex;
+    justify-content: center; /* Los centra perfectamente de izquierda a derecha */
+    align-items: center;
+    gap: 35px;               /* Espacio justo entre iconos */
+    padding: 20px 0;         /* Un pequeño espacio arriba y abajo para que respire */
+    margin: 0;               /* Cero espacios extras gigantes */
+
+    /* 2. EL DEGRADADO MORADO DE TU IMAGEN */
+    & i {
+        font-size: 55px; /* Tamaño ideal para que combine con el menú */
+        
+        /* Degradado exacto basado en la muestra violeta/morada que subiste */
+        background: linear-gradient(180deg, #71389e, #3a155c, #1f053a);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+        transition: transform 0.3s ease;
+    }
+
+    /* 3. EFECTO HOVER */
+    & a:hover i {
+        transform: scale(1.15);
+    }
+}
+
+ol li a {
+    color: inherit;       /* Hace que el texto del enlace tenga el mismo color que el resto del texto */
+    text-decoration: none; /* Quita la línea subrayada azul */
+}
+/* 1. Estilos base (para celulares / pantallas pequeñas) */
+body {
+    font-size: 16px;
+    padding: 10px;
+}
+
+.contenedor {
+    width: 100%; /* Ocupa todo el ancho en móviles */
+    display: flex;
+    flex-direction: column; /* Coloca los elementos uno debajo de otro */
+}
+
+/* 2. Pantallas medianas (Tabletas - a partir de 768px) */
+@media (min-width: 768px) {
+    .contenedor {
+        flex-direction: row; /* Coloca los elementos uno al lado de otro */
+        flex-wrap: wrap;
+    }
+}
+
+/* 3. Pantallas grandes (Laptops y Computadoras - a partir de 1024px) */
+@media (min-width: 1024px) {
+    .contenedor {
+        max-width: 1200px; /* Limita el ancho máximo para que no se estire demasiado */
+        margin: 0 auto;    /* Centra la página en la pantalla */
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}

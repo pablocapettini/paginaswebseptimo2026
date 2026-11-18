@@ -1,0 +1,103 @@
+/* ===== TÍTULOS PRINCIPALES ===== */
+
+h1 {
+    color: rgb(32, 32, 32);
+    text-align: center;
+    font-size: 50px;
+}
+
+h2 {
+    text-align: center;
+    color: #555;
+}
+
+h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+
+/* ===== TEXTO IMPORTANTE ===== */
+
+li strong {
+    text-align: center;
+    color: rgb(143, 106, 58);
+}
+
+li strong {
+    font-size: 22px;
+}
+
+strong {
+    color: #8B5A2B;
+}
+
+
+/* ===== FONDO Y CONFIGURACIÓN DEL BODY ===== */
+
+body {
+    background: linear-gradient(to bottom, #aa9b47, #ece091);
+}
+
+body {
+    min-height: 150vh;
+}
+
+body {
+    padding-top: 20px;
+}
+
+body {
+    font-family: "Iosevka Charon", monospaces
+}
+
+body {
+    background-size: 30px;
+}
+
+
+/* ===== IMÁGENES ===== */
+
+img {
+    width: 500px;
+}
+
+img {
+    display: inline-block;
+    margin: 40px;
+}
+
+img {
+    display: block;
+    margin: 10px auto;
+    width: 250px;
+}
+
+
+/* ===== PÁRRAFOS ===== */
+
+p {
+    text-align: center;
+    font-size: 20px;
+}
+
+p {
+    font-size: 20px;
+}
+
+
+/* ===== LISTAS ===== */
+
+ol {
+    display: inline-block;
+    text-align: left;
+}
+
+li {
+    font-size: 26px;
+}
+.volver{
+    position:  fixed; /* posicion de la flecha*/ 
+    top
+     position: fixed; /* posición de la flecha*/ top: 20px; left: 10px; width: 90px; /* tamaño del círculo */ height: 66px; /* tamaño del círculo */ font-size: 45px; /* tamaño de la flecha */ display: flex; justify-content: center; align-items: center; background-color: #222; color: gold; text-decoration: none; font-size:35px; border: 2px solid #39FF14; /* Circunferencia verde */ border-radius: 50%; /* Lo hace circular */ box-shadow: 0 0 15 #39FF14; transition: 0.3s; z-index: 9999; } .volver:hover { background-color: #39FF14; /* color de fondo */ color: gold; transform: scale(1.10); box-shadow: 0 0 25px #39FF14; /* color del fondo de la linea de fondo verde*/
+}
