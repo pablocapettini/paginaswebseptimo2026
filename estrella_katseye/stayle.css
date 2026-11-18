@@ -1,0 +1,534 @@
+
+
+
+  .boton {
+  background-color: purple;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  margin: 5px;
+  display: inline-block;
+    }
+
+.boton:hover {
+  background-color: darkviolet;
+}
+
+
+
+
+h1{
+  color: #fdf6f6;
+}
+
+li{
+  color: #ffffff;
+
+
+}
+
+
+
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; /* Opcional: define un ancho */
+}
+body{
+  background: url(imagenes/ChatGPT\ Image\ 17\ jun\ 2026\,\ 11_12_05\ a.m..png
+  );
+
+
+
+}
+
+
+h3{ 
+color: #ffffff;
+
+
+}
+p{
+  color: rgb(252, 253, 253);
+}
+li{
+  color: rgb(244, 246, 247);
+}
+h4{
+  color: rgb(243, 246, 248);
+}
+h5{
+  color: rgb(243, 246, 248);
+}
+
+h3{
+  color: #ffffff;
+}
+h2{ 
+   color: #ffffff;
+
+}
+
+
+/* Contenedor opcional para alinear los botones en fila */
+.contenedor-botones {
+    display: flex;
+    justify-content: center; /* Los centra en la pantalla */
+    gap: 20px;               /* Separa los botones entre sí */
+    padding: 20px;
+    background-color: #1a1a1a; /* Fondo oscuro para que resalten */
+}
+
+/* ESTILO BASE DE LOS BOTONES */
+.boton {
+    display: inline-block;
+    text-decoration: none;   /* Quita la línea de abajo del texto */
+    font-family: 'Poppins', sans-serif; /* Tipografía limpia */
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;          /* Texto blanco */
+    background-color: #8e44ad; /* Color morado base (estilo K-pop) */
+    padding: 12px 28px;      /* Espacio interno (grosor del botón) */
+    border-radius: 50px;     /* Bordes súper redondeados */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 1px;     /* Espacio entre letras */
+    transition: all 0.3s ease; /* Hace que los cambios visuales sean suaves */
+    box-shadow: 0 4px 15px rgba(142, 68, 173, 0.3); /* Sombra suave */
+}
+
+/* EFECTO CUANDO PASAS EL MOUSE POR ENCIMA (HOVER) */
+.boton:hover {
+    background-color: #ff007f; /* Cambia a un rosa brillante */
+    transform: translateY(-3px); /* Levanta el botón ligeramente */
+    box-shadow: 0 6px 20px rgba(255, 0, 127, 0.5); /* Sombra más intensa */
+}
+
+/* EFECTO CUANDO LE DAS CLIC (ACTIVE) */
+.boton:active {
+     transform: translateY(-1px); /* Baja un poquito al pulsar */
+     
+              }
+
+
+
+
+
+
+
+
+.boton-atras{
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+
+    width: 240px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(to bottom, #5d1aa8, #2b004f);
+    border: 3px solid #c87cff;
+    border-radius: 50px;
+
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+
+    box-shadow:
+        inset 0 2px 8px rgba(255,255,255,.3),
+        0 0 15px #8a2be2,
+        0 0 30px #6a0dad;
+
+    transition: .3s;
+}
+
+.boton-atras:hover{
+    transform: scale(1.05);
+    box-shadow:
+        inset 0 2px 8px rgba(255,255,255,.5),
+        0 0 20px #b54cff,
+        0 0 40px #8a2be2;
+}
+
+.circulo{
+    width: 55px;
+    height: 55px;
+    margin-left: 8px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(to bottom,#d991ff,#8a2be2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 28px;
+
+    box-shadow:
+        inset 0 2px 5px rgba(255,255,255,.5),
+        0 0 15px #c87cff;
+}
+
+.boton-atras span{
+    flex: 1;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.caja-texto{
+    width: 80%;
+    max-width: 900px;
+
+    margin: 120px auto 40px auto;
+
+    padding: 30px;
+
+    background: rgba(26, 26, 26, 0.85);
+
+    border: 3px solid #8a2be2;
+    border-radius: 20px;
+
+    box-shadow: 0 0 20px rgba(138,43,226,.6);
+}
+
+.caja-texto h2{
+    color: #d89cff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.caja-texto p{
+    color: white;
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+
+
+/* ===================================================== */
+/*                 TRIVIA DE KATSEYE                      */
+/*        (Pegá este código al final de stayle.css)       */
+/* ===================================================== */
+
+
+/* ---------- Caja principal de la trivia ---------- */
+.trivia{
+
+    /* Ancho de la caja */
+    width:80%;
+    max-width:850px;
+
+    /* Centra la caja */
+    margin:120px auto;
+
+    /* Espacio interno */
+    padding:35px;
+
+    /* Fondo semitransparente */
+    background:rgba(20,20,20,.90);
+
+    /* Borde violeta */
+    border:3px solid #9b4dff;
+
+    /* Bordes redondeados */
+    border-radius:25px;
+
+    /* Brillo */
+    box-shadow:0 0 25px #8a2be2;
+
+    /* Centra el texto */
+    text-align:center;
+}
+
+
+/* ---------- Título ---------- */
+.trivia h1{
+
+    color:#d896ff;
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+    text-shadow:0 0 10px #8a2be2;
+
+}
+
+
+/* ---------- Texto de bienvenida ---------- */
+.bienvenida{
+
+    color:white;
+
+    font-size:20px;
+
+    margin-bottom:30px;
+
+}
+
+
+/* ---------- Puntaje ---------- */
+#puntaje{
+
+    color:#ffe066;
+
+}
+
+
+/* ---------- Número de pregunta ---------- */
+#numeroPregunta{
+
+    color:#ffffff;
+
+}
+
+
+/* ---------- Pregunta ---------- */
+#pregunta{
+
+    color:white;
+
+    margin-top:30px;
+
+    margin-bottom:30px;
+
+}
+
+
+/* ---------- Donde aparecen los botones ---------- */
+#respuestas{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+/* ---------- Botones de respuestas ---------- */
+.respuesta{
+
+    background:linear-gradient(#7b2cff,#4b0082);
+
+    color:white;
+
+    border:none;
+
+    border-radius:15px;
+
+    padding:18px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+/* ---------- Cuando pasás el mouse ---------- */
+.respuesta:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 15px #c86bff;
+
+}
+
+
+/* ---------- Botón siguiente ---------- */
+#siguiente{
+
+    margin-top:35px;
+
+    padding:15px 35px;
+
+    background:#9b4dff;
+
+    color:white;
+
+    border:none;
+
+    border-radius:40px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+/* ---------- Hover ---------- */
+#siguiente:hover{
+
+    background:#b86bff;
+
+    transform:scale(1.05);
+
+}
+
+
+/* ---------- Mensaje ---------- */
+#mensaje{
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    margin-top:25px;
+
+}
+
+
+/* ---------- Pantalla final ---------- */
+#resultadoFinal{
+
+    display:none;
+
+    width:80%;
+
+    max-width:700px;
+
+    margin:120px auto;
+
+    text-align:center;
+
+    padding:40px;
+
+    background:rgba(20,20,20,.90);
+
+    border:3px solid #9b4dff;
+
+    border-radius:25px;
+
+    box-shadow:0 0 25px #8a2be2;
+
+}
+
+
+/* ---------- Título final ---------- */
+#resultadoFinal h1{
+
+    color:#d896ff;
+
+}
+
+
+/* ---------- Botón jugar otra vez ---------- */
+#resultadoFinal button{
+
+    margin-top:30px;
+
+    padding:15px 35px;
+
+    background:#8a2be2;
+
+    color:white;
+
+    border:none;
+
+    border-radius:40px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+/* ---------- Hover ---------- */
+#resultadoFinal button:hover{
+
+    background:#b54cff;
+
+    transform:scale(1.05);
+
+}
+
+
+.integrantes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+.tarjeta{
+    width: 300px;
+    background-color: rgba(83, 27, 143, 0.9);
+    border: 3px solid #c77dff;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 20px purple;
+}
+
+.tarjeta img{
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.tarjeta h2{
+    margin-top: 15px;
+    color: #ffd6ff;
+}
+
+.tarjeta p{
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.tarjeta:hover{
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+
+
+.bienvenida{
+    width: 800px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 3px solid #b25cff;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+}
+
+.bienvenida h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.bienvenida p{
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+.foto-principal{
+    display: block;
+    width: 650px;
+    margin: 40px auto;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #b25cff;
+}

@@ -1,0 +1,105 @@
+h1{color: hotpink;
+    background-image: 8ebde71cf36e6ef1634b4b6477273d8d,jpg;
+}
+body{
+    background: url(imagenes/b.jpg)
+
+}
+.navbar{
+    background: linear-gradient(90deg,#ff69b4,#ff9ed2,#ff69b4);
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 25px hotpink;
+}
+
+.logo{
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 10px white,
+                 0 0 20px hotpink,
+                 0 0 35px hotpink;
+}
+
+.nav-links{
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.nav-btn{
+    background: white;
+    color: hotpink;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 0 10px white;
+    transition: 0.3s;
+}
+
+.nav-btn:hover{
+    background: hotpink;
+    color: white;
+    box-shadow: 0 0 20px white
+                0 0 35px hotpink;
+    transform: scale(1.1);
+}
+.inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.titulo{
+    font-size: 150px;
+    font-family: Impact, sans-serif;
+    color: #ff69b4;
+    text-transform: uppercase;
+    text-shadow: 
+        0 0 15px #fff,
+        0 0 30px #ff69b4,
+        0 0 50px #ff69b4,
+        0 0 80px #ff69b4;
+}
+.inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.titulo{
+    font-size: 150px;
+    font-family: Impact, sans-serif;
+    color: #ff69b4;
+    text-transform: uppercase;
+    text-shadow: 
+        0 0 15px #fff,
+        0 0 30px #ff69b4,
+        0 0 50px #ff69b4,
+        0 0 80px #ff69b4;
+}
+.inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.blackpink{
+    font-size: 180px;
+    font-family: Impact, sans-serif;
+    color: #ff69b4;
+    text-align: center;
+    transform: rotate(-12deg);
+    text-shadow:
+        0 0 10px white,
+        0 0 20px hotpink,
+        0 0 40px hotpink;
+}
+
+
