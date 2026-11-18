@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Proyectos Web</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .grilla-botones {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 900px;
+        }
+        .boton-proyecto {
+            background-color: #ffffff;
+            color: #2563eb;
+            text-decoration: none;
+            padding: 25px 20px;
+            border-radius: 12px;
+            border: 2px solid #e5e7eb;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+        }
+        .boton-proyecto:hover {
+            background-color: #2563eb;
+            color: #ffffff;
+            border-color: #2563eb;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(37, 99, 235, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Paginas Web 7° Grado</h1>
+    <p>Hacé clic en un botón para abrir la página correspondiente</p>
+
+    <div class="grilla-botones">
+        <!-- REEMPLAZÁ LAS RUTAS Y NOMBRES POR LOS DE TUS ALUMNOS -->
+        <a href="bastian_badbunny/index.html" target="_blank" class="boton-proyecto">
+            Bad Bunny por Bastian
+        </a>
+
+        <a href="mateo_agostini/index.html" target="_blank" class="boton-proyecto">
+            Daniel Agostini por Mateo
+        </a>
+
+        <a href="alumno_lucas/proyecto.html" target="_blank" class="boton-proyecto">
+            Proyecto de Lucas
+        </a>
+    </div>
+
+</body>
+</html>
