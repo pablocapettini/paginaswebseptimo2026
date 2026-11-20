@@ -3,133 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú de Proyectos Web</title>
+    <title>PROYECTO: IDENTIDAD | 7° Grado - Escuela Japón</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
-            margin: 0;
-            padding: 40px 20px;
+            background-image: url('fondo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden; /* Evita barras de desplazamiento en pantalla completa */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 18px;
+        }
+
+        /* CONTENEDOR TRANSLÚCIDO QUE GARANTIZA LEGIBILIDAD SOBRE EL FONDO */
+        .pantalla-completa {
+            width: 100%;
+            max-width: 1360px;
+            height: 100%;
+            background-color: rgba(16, 14, 34, 0.84);
+            backdrop-filter: blur(5px);
+            border: 2px solid rgba(250, 204, 21, 0.55);
+            border-radius: 20px;
+            padding: 20px 30px;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.75);
         }
-        h1 {
-            color: #1a1a1a;
-            margin-bottom: 10px;
-        }
-        p {
-            color: #555;
-            margin-bottom: 30px;
-        }
-        .grilla-botones {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 20px;
-            width: 100%;
-            max-width: 900px;
-        }
-        .boton-proyecto {
-            background-color: #ffffff;
-            color: #2563eb;
-            text-decoration: none;
-            padding: 25px 20px;
-            border-radius: 12px;
-            border: 2px solid #e5e7eb;
+
+        /* ENCABEZADO */
+        header {
             text-align: center;
-            font-weight: bold;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            transition: all 0.2s ease;
         }
-        .boton-proyecto:hover {
-            background-color: #2563eb;
+
+        .titulo-principal {
+            font-size: clamp(1.6rem, 2.8vw, 2.5rem);
+            font-weight: 900;
+            color: #facc15; /* Amarillo identidad */
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8), 0 0 20px rgba(139, 92, 246, 0.5);
+            margin-bottom: 6px;
+        }
+
+        .titulo-principal span {
             color: #ffffff;
-            border-color: #2563eb;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(37, 99, 235, 0.2);
+            background-color: #6d28d9; /* Violeta identidad */
+            padding: 2px 14px;
+            border-radius: 8px;
+            border: 1px solid #facc15;
+            font-size: 0.78em;
+            vertical-align: middle;
+            margin-left: 8px;
+        }
+
+        .descripcion {
+            max-width: 920px;
+            margin: 0 auto;
+            font-size: clamp(0.9rem, 1.15vw, 1.05rem);
+            color: #f3f4f6;
+            line-height: 1.4;
+            background-color: rgba(88, 28, 135, 0.45);
+            padding: 8px 20px;
+            border-radius: 12px;
+            border-left: 4px solid #facc15;
+            border-right: 4px solid #facc15;
+        }
+
+        /* GRILLA DE 18 BOTONES (6 COLUMNAS X 3 FILAS) */
+        .grilla-proyectos {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 14px;
+            margin: 18px 0;
+        }
+
+        .boton-alumno {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            background: linear-gradient(145deg, #4c1d95, #2e1065); /* Violeta vibrante */
+            color: #ffffff;
+            border: 2px solid #a78bfa;
+            border-radius: 14px;
+            padding: 10px 8px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.45);
+            transition: all 0.22s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .boton-alumno .tema {
+            font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+            font-weight: 800;
+            color: #facc15; /* Amarillo de alto contraste */
+            margin-bottom: 4px;
+            line-height: 1.2;
+        }
+
+        .boton-alumno .autor {
+            font-size: clamp(0.78rem, 0.9vw, 0.88rem);
+            color: #e9d5ff;
+            font-weight: 500;
+        }
+
+        /* EFECTO AL PASAR EL CURSOR */
+        .boton-alumno:hover {
+            background: #facc15; /* Se invierte a amarillo brillante */
+            border-color: #ffffff;
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 0 22px rgba(250, 204, 21, 0.75);
+        }
+
+        .boton-alumno:hover .tema {
+            color: #2e1065; /* Texto violeta oscuro sobre amarillo */
+        }
+
+        .boton-alumno:hover .autor {
+            color: #3b0764;
+            font-weight: 700;
+        }
+
+        /* PIE DE PÁGINA */
+        footer {
+            text-align: center;
+            padding-top: 8px;
+            border-top: 1px solid rgba(250, 204, 21, 0.35);
+            color: #facc15;
+            font-weight: 700;
+            font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* ADAPTACIÓN POR SI SE ABRE EN PANTALLAS CHICAS O CELULARES */
+        @media (max-width: 900px) {
+            body {
+                height: auto;
+                overflow-y: auto;
+            }
+            .pantalla-completa {
+                height: auto;
+            }
+            .grilla-proyectos {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+            }
+            .boton-alumno {
+                min-height: 85px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>Paginas Web 7° Grado</h1>
-    <p>Hacé clic en un botón para abrir la página correspondiente</p>
+    <div class="pantalla-completa">
+        <header>
+            <h1 class="titulo-principal">
+                PROYECTO: IDENTIDAD <span>Sitios web de 7° grado</span>
+            </h1>
+            <p class="descripcion">
+                "En el marco del Proyecto Identidad los alumnos de 7° grado creamos sitios web de artistas, juegos, personajes que nos gustan y forman parte de nuestra identidad."
+            </p>
+        </header>
 
-    <div class="grilla-botones">
-        <!-- REEMPLAZÁ LAS RUTAS Y NOMBRES POR LOS DE TUS ALUMNOS -->
-        <a href="bastian_badbunny/index.html" target="_blank" class="boton-proyecto">
-            Bad Bunny por Bastian
-        </a>
+        <main class="grilla-proyectos">
+            <!-- 1 al 6 -->
+            <a href="spreen/index.html" target="_blank" class="boton-alumno">
+                <span class="tema">Spreen</span>
+                <span class="autor">Lautaro</span>
+            </a>
+            <a href="michael_jackson/index.html" target="_blank" class="boton-alumno">
+                <span class="tema">Michael Jackson</span>
+                <span class="autor">Valentino</span>
+            </a>
+            <a href="hatsune_miku/index.html" target="_blank" class="boton-alumno">
+                <span class="tema">Hatsune Miku</span>
+                <span class="autor">Alumno/a 3</span>
+            </a>
+            <a href="stray_kids/index.html" target="_blank" class="boton-alumno">
+                <span class="tema">Stray Kids</span>
+                <span class="autor">Alumna 4</span>
+            </a>
+            <a href="carpeta_5/index.html" target="_blank" class="boton-alumno">
+                <span class="tema">Proyecto 5</span>
+                <span class="autor">Alumno/a 5</span>
+            </a>
+            <a href="carpeta_6/index.html" target="_blank" class="boton-alumno">
+                <span class="tema">Proyecto 6</span>
+                <span class="autor">Alumno/a 6</span>
+            </a>
 
-        <a href="mateo_agostini/index.html" target="_blank" class="boton-proyecto">
-            Daniel Agostini por Mateo
-        </a>
+            <!-- 7 al 12 -->
+            <a href="carpeta_7/index.html" target="_blank" class="boton-alumno">
+                <span class="tema">Proyecto 7</span>
+                <span class="autor">Alumno/a 7</span>
+            </a>
+            <a href="carpeta_8/index.html" target="_blank" class="boton-alumno">
+                <span class="tema">Proyecto 8</span>
+                <span class="autor">Alumno/a 8</span>
+            </a>
+            <a href="carpeta_9/index.html" target="_blank" class="boton-alumno">
+                <span class="tema">Proyecto 9</span>
+                <span class="autor">Alumno/a 9</span>
+            </a>
+            <a href="carpeta_10/index.html" target="_blank" class="boton-alumno">
+                <span class="tema">Proyecto 10</span>
+                <span class="autor">Alumno/a 10</span>
+            </a>
+            <a href="carpeta_11/index.html" target="_blank" class="boton-alumno">
+                <span class="tema">Proyecto 11</span>
+                <span class="autor">Alumno/a 11</span>
+            </a>
+            <a href="carpeta_12/index.html" target="_blank" class="boton-alumno">
+                <span class="tema">Proyecto 12</span>
+                <span class="autor">Alumno/a 12</span>
+            </a>
 
-        <a href="estrella_katseye/index.html" target="_blank" class="boton-proyecto">
-            Katseye por Estrella
-        </a>
+            <!-- 13 al 18 -->
+            <a href="carpeta_13/index.html" target="_blank" class="boton-alumno">
+                <span class="tema">Proyecto 13</span>
+                <span class="autor">Alumno/a 13</span>
+            </a>
+            <a href="carpeta_14/index.html" target="_blank" class="boton-alumno">
+                <span class="tema">Proyecto 14</span>
+                <span class="autor">Alumno/a 14</span>
+            </a>
+            <a href="carpeta_15/index.html" target="_blank" class="boton-alumno">
+                <span class="tema">Proyecto 15</span>
+                <span class="autor">Alumno/a 15</span>
+            </a>
+            <a href="carpeta_16/index.html" target="_blank" class="boton-alumno">
+                <span class="tema">Proyecto 16</span>
+                <span class="autor">Alumno/a 16</span>
+            </a>
+            <a href="carpeta_17/index.html" target="_blank" class="boton-alumno">
+                <span class="tema">Proyecto 17</span>
+                <span class="autor">Alumno/a 17</span>
+            </a>
+            <a href="carpeta_18/index.html" target="_blank" class="boton-alumno">
+                <span class="tema">Proyecto 18</span>
+                <span class="autor">Alumno/a 18</span>
+            </a>
+        </main>
 
-        <a href="alys_blackpink/index.html" target="_blank" class="boton-proyecto">
-            BlackPink por Alys
-        </a>
-
-        <a href="tiziano_shakira/index.html" target="_blank" class="boton-proyecto">
-            Shakira por Tiziano
-        </a>
-
-        <a href="theo_robleis/index.html" target="_blank" class="boton-proyecto">
-            Robleis por Theo
-        </a>
-
-        <a href="lautaro_spreen/index.html" target="_blank" class="boton-proyecto">
-            Spreen por Lautaro
-        </a>
-
-        <a href="amira_londra/index.html" target="_blank" class="boton-proyecto">
-            Paulo Londra por Amira
-        </a>
-
-        <a href="gaby_courtz/index.html" target="_blank" class="boton-proyecto">
-            Omar Courtz por Gaby
-        </a>
-
-        <a href="valentino_jackson/index.html" target="_blank" class="boton-proyecto">
-            Michael Jackson por Valentino
-        </a>
-
-         <a href="alexis_canserbero/index.html" target="_blank" class="boton-proyecto">
-            Canserbero por Alexis
-        </a>
-
-        <a href="bruno_roblox/index.html" target="_blank" class="boton-proyecto">
-            Roblox por Bruno
-        </a>
-
-        <a href="jazmin_straykids/index.html" target="_blank" class="boton-proyecto">
-           StrayKids por Jazmin
-        </a>
-
-        <a href="priscila_hakune/index.html" target="_blank" class="boton-proyecto">
-            Hatsune Miku por Priscila
-        </a>
-
-        <a href="janna_minecraft/index.html" target="_blank" class="boton-proyecto">
-            Minecraft por Janna
-        </a>
-
-        <a href="janna_minecraft/index.html" target="_blank" class="boton-proyecto">
-            Alma
-        </a>
-
-        <a href="janna_minecraft/index.html" target="_blank" class="boton-proyecto">
-            Uma
-        </a>
-
-        <a href="janna_minecraft/index.html" target="_blank" class="boton-proyecto">
-            Lore
-        </a>
-
+        <footer>
+            Escuela "Japón" - CABA - 2026
+        </footer>
     </div>
 
 </body>
